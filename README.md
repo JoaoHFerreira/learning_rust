@@ -1,5 +1,1 @@
-Creating Docker
-`docker-compose up --build``
-
-Running Rust Code
-docker-compose run --rm -it rust-app  cargo run
+# [Get Up and Running with Docker and Rust](./docs/up_and_running.md)
