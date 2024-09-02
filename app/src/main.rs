@@ -7,9 +7,19 @@ fn scan(){
     println!("{}", my_string);
 }
 
-fn finding_elements_in_list(target_position: usize){
+fn finding_elements_in_list(target_number: usize){
     let numbers = vec![1, 2, 3, 4];
-    println!("{}", numbers[target_position]);
+    println!("the number in the vector postion is {}", numbers[target_number]);
+
+    for n in numbers{
+        if n == target_number{
+            println!("Your choosen number is {}", n);
+            return;
+        }
+    }
+
+    println!("The value {} was not found", target_number);
+
 }
 
 fn main() {
@@ -20,11 +30,11 @@ fn main() {
 
     let mut input = String::new();
     let _ = stdin().read_line(&mut input).unwrap();
-    let number: i32 = input.trim().parse().unwrap();
+    let number: usize = input.trim().parse().unwrap();
 
     match number{
         1 => scan(),
-        2 => finding_elements_in_list(3),
+        2 => finding_elements_in_list(0),
         _ => println!("Other Thing"),
     }   
     
